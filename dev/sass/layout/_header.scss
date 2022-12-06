@@ -1,0 +1,219 @@
+@keyframes menuAnimate {
+  0% {
+    top: -100%;
+  }
+  75% {
+    top: 0;
+  }
+}
+header {
+  padding-top: 3.4rem;
+  animation-name: menuAnimate;
+  animation-duration: 1s;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8.6rem;
+  }
+}
+.menu-left {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social-container {
+  max-width: 10rem;
+  a {
+    &:first-child {
+      width: 1.9rem;
+      height: 1.9rem;
+      margin-right: 0.7rem;
+    }
+    margin-right: 1rem;
+    width: 2.1rem;
+    height: 2.1rem;
+    display: inline-block;
+    vertical-align: middle;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.logo {
+  width: 100%;
+  max-width: 24.4rem;
+  height: auto;
+  max-height: 6rem;
+  display: block;
+  a,
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.menu_body {
+  z-index: 5;
+  @media (max-width: 766px) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1d1815;
+    transition: top 0.4s ease;
+    padding: 12rem 0 0;
+  }
+}
+.menu_list {
+  @media (min-width: $media_tablet) {
+    display: flex;
+    align-items: center;
+  }
+  * {
+    color: #ffffff;
+    font-size: 1.8rem;
+    transition: color 0.4s ease;
+    @media (min-width: $media_tablet) {
+      font-size: 1.6rem;
+    }
+  }
+  > li {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    margin-right: 1.5rem;
+    border-bottom: 1px solid #2f2824;
+    @media (min-width: $media_tablet) {
+      border-bottom: none;
+    }
+    a {
+      display: block;
+      padding: 2.5rem 0 2.5rem 1.8rem;
+      text-align: left;
+      @media (min-width: $media_tablet) {
+        padding: 2.5rem 0;
+      }
+    }
+  }
+}
+.menu_sub-list {
+  position: relative;
+  background-color: #0e0b0a;
+  flex: 1 1 100%;
+  > li {
+    padding: 0;
+    border-bottom: 1px solid #322a26;
+    &:last-child {
+      border-bottom: none;
+    }
+    a {
+      @media (min-width: $media_tablet) {
+        padding: 1.7rem 1rem;
+      }
+    }
+  }
+
+  @media (min-width: $media_tablet) {
+    padding: 0 1rem;
+    background-color: #1d1815;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 14rem;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+    transform: translate(0px, 10%);
+  }
+}
+.menu-icon {
+  z-index: 5;
+  display: block;
+  position: relative;
+  width: 1.6rem;
+  height: 1.4rem;
+  cursor: pointer;
+  & span,
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transition: all 0.4s ease-in-out;
+    background-color: #f69e29;
+    border-radius: 2px;
+  }
+  &::before,
+  &::after {
+    content: '';
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+  & span {
+    top: 50%;
+    transform: scale(1) translate(0, -50%);
+  }
+  @media (min-width: $media_tablet) {
+    display: none;
+  }
+}
+._pc {
+  .menu_list {
+    li:hover {
+      .menu_sub-list {
+        opacity: 1;
+        pointer-events: all;
+        visibility: visible;
+        transform: translate(0px, 0px);
+      }
+      > a {
+        color: #868078;
+      }
+      .menu-arr {
+        border-color: #868078;
+        transform: rotate(135deg);
+      }
+    }
+  }
+}
+._touch {
+  .menu_list {
+    > .activeArr {
+      .menu_sub-list {
+        opacity: 1;
+        pointer-events: all;
+        visibility: visible;
+        transform: translate(0px, 0px);
+      }
+      > .menu-arr {
+        transform: rotate(135deg);
+      }
+    }
+  }
+}
+.menu-arr {
+  margin-left: 0.7rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  display: inline-block;
+  vertical-align: middle;
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: all 0.4s ease;
+}
