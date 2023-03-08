@@ -1,0 +1,65 @@
+.call-order {
+  background-color: #ededed;
+  padding: 4rem 0 3rem;
+  @media (min-width: $media_tablet) {
+    padding: 8rem 0;
+  }
+  h2 {
+    text-align: left;
+    margin-bottom: 2.7rem;
+    @media (min-width: $media_tablet) {
+      text-align: center;
+    }
+  }
+  .call-order-descript {
+    font-size: 1.6rem;
+    color: #5c5751;
+    text-align: left;
+    font-weight: normal;
+    margin-bottom: 4rem;
+    @media (min-width: $media_tablet) {
+      text-align: center;
+    }
+    @media (min-width: $large_desktop) {
+      font-size: 1.8rem;
+      margin-bottom: 5rem;
+    }
+  }
+  .popup-calc__form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & > * {
+      width: 100%;
+      @media (min-width: $media_tablet) {
+        width: 32%;
+      }
+    }
+    &:last-child {
+      flex-wrap: wrap-reverse;
+    }
+  }
+  .popupForm label,
+  .popupForm input {
+    font-weight: normal;
+  }
+  .form__btn {
+    background-color: #e49f46;
+    color: #fff;
+    text-transform: none;
+    margin-top: 1.4rem;
+    transition: color 0.3s ease;
+    @media (min-width: $media_tablet) {
+      margin-top: 0;
+    }
+    &:hover {
+      color: #0b0b0b;
+    }
+  }
+  .operator {
+    display: flex;
+  }
+  .input-checkbox {
+    max-width: 32rem;
+  }
+}

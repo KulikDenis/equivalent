@@ -1,0 +1,35 @@
+.about {
+  padding: 4rem 0;
+  @media (min-width: $media_tablet) {
+    padding: 8rem 0;
+  }
+  .columns-container {
+    flex-wrap: wrap-reverse;
+    @media (min-width: $media_tablet) {
+      margin-top: -5%;
+      .column:first-child {
+        padding-top: 5%;
+      }
+    }
+    .column:last-child {
+      margin: 4rem auto;
+      @media (min-width: $media_tablet) {
+        margin: auto;
+      }
+    }
+  }
+  p {
+    margin-bottom: 4rem;
+    max-width: 54rem;
+  }
+  .btn {
+    padding: 1.5rem 4rem;
+    display: block;
+    max-width: 20rem;
+    margin: 0 auto;
+    @media (min-width: $media_tablet) {
+      margin: 0;
+      display: inline-block;
+    }
+  }
+}

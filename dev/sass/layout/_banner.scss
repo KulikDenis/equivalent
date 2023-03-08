@@ -1,0 +1,406 @@
+.main-banner {
+  background-color: #fff;
+  min-height: auto;
+  position: relative;
+
+  @media (min-width: $media_desktop) {
+    min-height: 710px;
+  }
+  @media (min-width: $large_desktop) {
+    min-height: 880px;
+  }
+  &.flex-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    //margin-bottom: 5rem;
+    .banner-content {
+      padding-bottom: 0;
+    }
+    .bg-img {
+      height: calc(100% - 5rem);
+    }
+    &.dark {
+      background-color: #27201c;
+    }
+  }
+  .bg-img {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 2500px;
+  }
+  .banner-content {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    padding-bottom: 3rem;
+    flex-grow: 1;
+  }
+  h1,
+  p {
+    color: #fff;
+  }
+  .title__banner {
+    display: inline-block;
+    padding: 8rem 0 3rem;
+    @media (min-width: $media_tablet) {
+      padding: 12rem 2rem 3rem 0;
+    }
+    @media (min-width: $media_desktop) {
+      padding: 18rem 2rem 7rem 0;
+    }
+    @media (min-width: $large_desktop) {
+      padding: 21rem 2rem 17rem 0;
+    }
+    &.tiny-title {
+      padding: 0 2rem 0 0;
+      max-width: 100rem;
+      margin: 8rem 0 0;
+      @media (min-width: $media_tablet) {
+        margin: 10rem 2rem 3rem 0;
+      }
+      @media (min-width: $media_desktop) {
+        margin: 10rem 2rem 7rem 0;
+      }
+      @media (min-width: $large_desktop) {
+        margin: 17rem 2rem 0 0;
+      }
+    }
+  }
+  p {
+    max-width: 70rem;
+  }
+  .fz-24 {
+    font-size: 1.6rem;
+    @media (min-width: $media_tablet) {
+      font-size: 2rem;
+    }
+  }
+}
+.banner-breadcrump {
+  margin-bottom: 3rem;
+  @media (min-width: $large_desktop) {
+    margin-bottom: 4rem;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  li {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    @media (min-width: $media_tablet) {
+      font-size: 1.6rem;
+    }
+    &:after {
+      content: "›";
+      color: #f69e29;
+      display: inline-block;
+      margin: 0 0.9rem;
+      @media (min-width: $media_tablet) {
+        margin: 0 2rem;
+      }
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+.banner-form {
+  display: none;
+  background-color: #fff;
+
+  max-width: 34rem;
+  width: 100%;
+  @media (min-width: $media_tablet) {
+    margin-top: 10rem;
+    display: inline-block;
+    padding: 1.5rem;
+  }
+
+  @media (min-width: $large_desktop) {
+    margin-top: 17rem;
+    padding: 3rem;
+  }
+  .form__input {
+    margin-bottom: 2rem;
+  }
+  .form__input input,
+  .form__input label,
+  .form__input textarea {
+    padding: 1.7rem;
+    background-color: #ececec;
+    color: #9a9a9a;
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+  .form__btn {
+    font-size: 1.4rem;
+  }
+  .form__input label {
+    text-transform: uppercase;
+  }
+  .modal__header {
+    margin-bottom: 1rem;
+  }
+  .modal__text {
+    color: #868078;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+}
+.tabs {
+  width: 100%;
+  &__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+  }
+  &__btn {
+    position: relative;
+    flex: 0 0 48%;
+    padding: 1rem 0.5rem;
+    border: none;
+    background-color: transparent;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: #9b9b9b;
+    transition: color 0.2s;
+    cursor: pointer;
+    background-color: #1d1815;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    &:nth-of-type(odd) {
+      margin-right: 0.8rem;
+    }
+    @media (min-width: $media_desktop) {
+      justify-content: center;
+      padding: 1rem 2.5rem;
+      flex: 1 0 auto;
+      margin: 0;
+      font-size: 1.8rem;
+      &:nth-of-type(odd) {
+        margin-right: 0;
+      }
+    }
+    &.active {
+      transition: all 0.3s ease;
+      color: #0b0b0b;
+      background-color: #f69e29;
+      & .tabs__ico {
+        stroke: #0b0b0b;
+      }
+    }
+  }
+  &__ico {
+    margin-right: 1rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    display: inline-block;
+    stroke: #9b9b9b;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+  &__content {
+    margin-top: 3rem;
+  }
+
+  &__body {
+    width: 100%;
+    display: none;
+    font-size: 18px;
+    &.active {
+      display: block;
+    }
+    &.last_body {
+      .form__btn {
+        margin-top: 0;
+      }
+    }
+    @media (min-width: $media_desktop) {
+      &.last_body {
+        max-width: 97rem;
+        .form__btn {
+          max-width: 32rem;
+        }
+      }
+    }
+  }
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    > * {
+      flex-shrink: 1;
+      width: 100%;
+    }
+    @media (min-width: $media_desktop) {
+      flex-direction: row;
+    }
+    .form__input {
+      @media (min-width: $media_desktop) {
+        margin-right: 0.8rem;
+      }
+      @media (min-width: $large_desktop) {
+        margin-right: 2.4rem;
+      }
+    }
+    button {
+      margin-top: 1.5rem;
+      @media (min-width: $media_desktop) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+.input__flex {
+  display: flex;
+  .form__input {
+    width: 50%;
+    &:first-child {
+      margin-right: 0.8rem;
+      @media (min-width: $large_desktop) {
+        margin-right: 2.4rem;
+      }
+    }
+  }
+}
+.banner-benefits {
+  background-color: #f69e29;
+  padding: 0.8rem 1.8rem;
+  position: relative;
+  z-index: 0;
+  //transform: translateY(5rem);
+  margin: 0 1rem;
+  &.benefits-white {
+    background-color: #fff;
+    ul li {
+      border-color: #e6e6e6;
+    }
+    .svg-ico {
+      fill: #f69e29;
+    }
+  }
+  @media (min-width: $media_tablet) {
+    max-width: 1340px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $media_tablet) {
+      flex-direction: row;
+    }
+  }
+  li {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    border-bottom: 2px solid #d78820;
+    @media (min-width: $media_tablet) {
+      border-right: 2px solid #d78820;
+      border-bottom: none;
+    }
+    @media (min-width: $large_desktop) {
+      padding: 1.2rem 8rem;
+    }
+    &:last-child {
+      border: none;
+    }
+  }
+  p {
+    font-weight: normal;
+    color: #161210;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    @media (min-width: $large_desktop) {
+      font-size: 1.8rem;
+      max-width: 17rem;
+    }
+  }
+  .svg-ico {
+    max-width: 3.9rem;
+    max-height: 3.9rem;
+    margin-right: 3rem;
+    fill: #161210;
+    @media (min-width: $large_desktop) {
+      max-width: 5.4rem;
+      max-height: 5.7rem;
+    }
+  }
+}
+.banner-statistic {
+  background-color: #f69e29;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-top: 3rem;
+  @media (min-width: $media_tablet) {
+    padding: 0.8rem 0;
+  }
+  &__wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  &__list {
+    // display: flex;
+    // align-items: flex-start;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media (min-width: $media_tablet) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &__list-item {
+    text-align: center;
+
+    padding: 1rem;
+
+    &:nth-child(odd) {
+      border-right: 2px solid #d78820;
+    }
+    &:nth-child(1),
+    &:nth-child(2) {
+      border-bottom: 2px solid #d78820;
+    }
+    @media (min-width: $media_tablet) {
+      padding: 3rem 1rem 2rem;
+      padding: 0;
+      border-bottom: 0;
+      &:nth-child(1),
+      &:nth-child(2) {
+        border-bottom: 0;
+      }
+      &:nth-child(2) {
+        border-right: 2px solid #d78820;
+      }
+    }
+    & span {
+      font-size: 3.2rem;
+      color: #161210;
+      @media (min-width: $large_desktop) {
+        font-size: 4rem;
+      }
+    }
+    & p {
+      font-size: 1.3rem;
+      color: #161210;
+      margin-bottom: 0;
+      font-weight: normal;
+      @media (min-width: $large_desktop) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.divisions,
+.contacts {
+  background-color: #ededed;
+  padding: 2rem 0 13rem;
+  h2 {
+    margin-bottom: 2.5rem;
+    @media (min-width: $large_desktop) {
+      margin-bottom: 8rem;
+    }
+  }
+  .card {
+    margin-bottom: 3rem;
+    @media (min-width: $media_tablet) {
+      margin-bottom: 2%;
+    }
+  }
+  .card-wrapper {
+    background-color: #fff;
+    padding: 2.5rem 1.8rem;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .card-title {
+    font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 1.8rem;
+    @media (min-width: $large_desktop) {
+      font-size: 3.6rem;
+      margin-bottom: 5rem;
+    }
+  }
+  .card-text {
+    color: #1c1309;
+    font-size: 1.4rem;
+    margin-bottom: 5rem;
+    @media (min-width: $large_desktop) {
+      font-size: 2rem;
+    }
+  }
+  .card-adress a {
+    color: #1c1309;
+    font-size: 1.4rem;
+    display: block;
+    text-align: left;
+  }
+  .splide__img {
+    height: auto;
+  }
+  .card-time {
+    margin-bottom: 0;
+    color: #1c1309;
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+}
+.contacts {
+  h2 {
+    margin-bottom: 3rem;
+    @media (min-width: $large_desktop) {
+      margin-bottom: 6rem;
+    }
+  }
+  .contacts-text {
+    margin-bottom: 0;
+    padding: 0 0 3rem;
+    @media (min-width: $large_desktop) {
+      padding: 0 0 6rem;
+    }
+  }
+}

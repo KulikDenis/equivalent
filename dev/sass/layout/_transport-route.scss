@@ -1,0 +1,38 @@
+.transport-route {
+  overflow: hidden;
+  background-color: #15110f;
+  .transport-route__description {
+    padding: 5rem 0 76%;
+    position: relative;
+    z-index: 5;
+    max-width: 44rem;
+    @media (min-width: $media_tablet) {
+      padding: 8% 0 12%;
+    }
+    @media (min-width: $large_desktop) {
+      padding: 10% 0 20%;
+      max-width: 64rem;
+    }
+  }
+  h2 {
+    color: #f69e29;
+    margin-bottom: 3.4rem;
+    @media (min-width: $media_tablet) {
+      margin-bottom: 8rem;
+    }
+  }
+  .btn {
+    padding: 1.5rem 6rem;
+  }
+  .bg-img {
+    left: 0;
+    object-fit: contain;
+    object-position: left bottom;
+    @media (min-width: $media_tablet) {
+      left: 31%;
+    }
+    @media (min-width: 1480px) {
+      left: 40%;
+    }
+  }
+}

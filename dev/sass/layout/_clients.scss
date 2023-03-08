@@ -1,0 +1,46 @@
+.clients {
+  background-color: #fff;
+  padding: 4rem 0 3rem;
+  @media (min-width: $media_tablet) {
+    padding: 8rem 0 3rem;
+  }
+  .clients__wrapper {
+    max-width: 1510px;
+    margin: 0 auto;
+  }
+  .clients__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .client__item {
+    width: 50%;
+    transition: 0.3s all ease;
+    opacity: 0.4;
+    filter: grayscale(1);
+    margin-bottom: 0;
+    &:hover {
+      opacity: 1;
+      filter: grayscale(0);
+    }
+
+    img {
+      max-width: 25.4rem;
+      margin: 0 auto;
+    }
+    @media (min-width: $media_tablet) {
+      width: 25%;
+      margin-bottom: 2rem;
+      img {
+        max-width: 25.4rem;
+        margin: 0 auto;
+      }
+    }
+  }
+  .clients-wrapper {
+    max-width: 1465px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+}

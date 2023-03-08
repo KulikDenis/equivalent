@@ -1,0 +1,106 @@
+.delivery {
+  padding: 3rem 0;
+  position: relative;
+  //z-index: 1;
+  @media (min-width: $media_tablet) {
+    padding: 7rem 0 5rem;
+    background: linear-gradient(to bottom, #fff 520px, #ededed 520px);
+  }
+  h2 {
+    max-width: 75rem;
+  }
+  p {
+    max-width: 106rem;
+  }
+  .dislaimer-paragraph {
+    @media (min-width: $media_tablet) {
+      margin-bottom: 5rem;
+    }
+  }
+  .splide {
+    padding: 3rem 0;
+    @media (min-width: $media_tablet) {
+      padding: 7rem 0 3rem;
+    }
+  }
+}
+
+.delivery-list {
+  background-color: #fff;
+  margin: 9rem auto 4rem;
+  max-width: 1340px;
+  @media (min-width: $media_tablet) {
+    filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
+  }
+  ul {
+    display: grid;
+    grid-template-areas:
+      'item1 item2'
+      'item4 item5'
+      'item3 item6';
+    @media (min-width: $media_tablet) {
+      grid-template-areas:
+        'item1 item2 item3'
+        'item4 item5 item6';
+    }
+  }
+  .item1 {
+    grid-area: item1;
+  }
+  .item2 {
+    grid-area: item2;
+  }
+  .item3 {
+    grid-area: item3;
+  }
+  .item4 {
+    grid-area: item4;
+  }
+  .item5 {
+    grid-area: item5;
+  }
+  .item6 {
+    grid-area: item6;
+  }
+
+  .delivery-list-item {
+    padding: 5rem 1rem;
+    &:nth-child(2n) {
+      background-color: #f2f2f2;
+    }
+    &:nth-child(2n + 1) {
+      background-color: #fff;
+    }
+  }
+  .delivery-list__ico {
+    margin: 0 auto 4rem;
+    width: 8rem;
+    height: 8rem;
+    @media (min-width: $large_desktop) {
+      width: 9.6rem;
+      height: 9.6rem;
+    }
+  }
+  .delivery-list__head-text {
+    color: #402706;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    @media (min-width: $large_desktop) {
+      font-size: 2.4rem;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+  }
+  .delivery-list__main-text {
+    color: #5c5751;
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 29rem;
+    margin: 0 auto;
+    @media (min-width: $large_desktop) {
+      font-size: 1.8rem;
+    }
+  }
+}

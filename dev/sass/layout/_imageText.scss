@@ -1,0 +1,203 @@
+.imageText {
+  background-color: #27201c;
+  h2 {
+    color: #f69e29;
+  }
+  .imageText-wrapper {
+    max-width: 1680px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    @media (min-width: $media_tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .text-column {
+    align-self: center;
+    padding: 4rem 2rem;
+    max-width: 67rem;
+    @media (min-width: $large_desktop) {
+      padding: 10rem 2rem 10rem 7rem;
+    }
+  }
+  .image-column {
+    object-fit: cover;
+    object-position: center center;
+  }
+  &.imageWhideText {
+    .imageText-wrapper {
+      @media (min-width: $media_tablet) {
+        grid-template-columns: 58% 42%;
+      }
+    }
+    .text-column {
+      max-width: 814px;
+      margin: 0 0 0 auto;
+      grid-row: 2;
+      @media (min-width: $media_tablet) {
+        grid-row: auto;
+      }
+      @media (min-width: $large_desktop) {
+        padding: 10rem 10rem 10rem 1rem;
+      }
+    }
+  }
+}
+.floatImage {
+  position: relative;
+  background-color: #27201c;
+  &::after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+  h2,
+  h3,
+  h4 {
+    color: #f69e29;
+  }
+  .imageText-wrapper {
+    max-width: 1680px;
+    margin: 0 auto;
+  }
+  .imageText-column {
+    @media (min-width: $media_tablet) {
+      float: left;
+      width: 50%;
+      margin-right: 2rem;
+      margin-bottom: 2rem;
+    }
+    @media (min-width: $large_desktop) {
+      margin-right: 7rem;
+    }
+  }
+  .text-column {
+    padding: 4rem 2rem;
+    max-width: 1360px;
+    margin: 0 auto;
+    @media (min-width: $large_desktop) {
+      padding: 10rem 1rem;
+    }
+  }
+}
+.numList {
+  margin: 2rem 0;
+  font-size: 1.4rem;
+  font-weight: 300;
+  list-style-type: decimal;
+  padding-left: 2rem;
+  line-height: 1.5;
+  @media (min-width: $large_desktop) {
+    font-size: 1.7rem;
+  }
+}
+.numList__item {
+  margin-bottom: 1rem;
+  &::marker {
+    color: #f69e29;
+  }
+}
+.bullList {
+  margin: 0 0 2rem 0;
+  padding-left: 2rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  list-style-type: disc;
+  line-height: 1.5;
+  @media (min-width: $large_desktop) {
+    font-size: 1.7rem;
+  }
+}
+.bullList__item {
+  margin-bottom: 1rem;
+  &::marker {
+    color: #f69e29;
+  }
+}
+.impExp {
+  padding: 4rem 0 3rem;
+  @media (min-width: $media_tablet) {
+    padding: 8rem 0 6rem;
+  }
+  h2 {
+    margin-bottom: 3rem;
+    @media (min-width: $large_desktop) {
+      margin-bottom: 8rem;
+    }
+  }
+  .impExp__columns-container {
+    display: grid;
+    gap: 1.6rem;
+    grid-template-columns: 1fr;
+
+    @media (min-width: $media_tablet) {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem 2rem;
+    }
+    .column:nth-child(2) {
+      grid-row-start: 1;
+      @media (min-width: $media_tablet) {
+        grid-row-start: auto;
+      }
+    }
+  }
+  .impExp-wrap {
+    border: 1px solid #dfdfdf;
+    padding: 2.6rem;
+    //margin-bottom: 4rem;
+    height: 100%;
+
+    @media (min-width: $media_tablet) {
+      min-height: 42rem;
+    }
+    @media (min-width: $large_desktop) {
+      padding: 5rem;
+    }
+    &:nth-child(3) {
+      background-color: #f2f2f2;
+    }
+  }
+  .impExp-image-decor {
+    height: 100%;
+    margin: 0.7rem 0 0 0.7rem;
+    position: relative;
+    @media (min-width: $media_tablet) {
+      margin: 1.5rem 0 0 1.5rem;
+    }
+    picture,
+    img {
+      position: relative;
+      z-index: 2;
+    }
+    .img-cover {
+      object-fit: cover;
+      object-position: center center;
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #f69e29;
+      top: -0.7rem;
+      left: -0.7rem;
+      z-index: 0;
+      @media (min-width: $media_tablet) {
+        top: -1.5rem;
+        left: -1.5rem;
+      }
+    }
+  }
+  .impExp-header {
+    font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 1.5rem;
+    @media (min-width: $large_desktop) {
+      font-size: 3.6rem;
+      margin-bottom: 3rem;
+    }
+  }
+}

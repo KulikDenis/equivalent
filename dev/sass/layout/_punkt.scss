@@ -1,0 +1,107 @@
+.punkt {
+  .columns-container {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    @media (min-width: $media_tablet) {
+      margin-top: 0;
+      .column:first-child {
+        padding-top: 0;
+      }
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .punkts-list {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $media_tablet) {
+      max-width: 44rem;
+      margin: 0 0 0 auto;
+    }
+    a {
+      &:after {
+        pointer-events: none;
+        display: block;
+        content: '';
+        background-image: url("data:image/svg+xml,%3Csvg width='64' height='16' viewBox='0 0 64 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M63.7071 8.70711C64.0976 8.31658 64.0976 7.68342 63.7071 7.29289L57.3431 0.928932C56.9526 0.538408 56.3195 0.538408 55.9289 0.928932C55.5384 1.31946 55.5384 1.95262 55.9289 2.34315L61.5858 8L55.9289 13.6569C55.5384 14.0474 55.5384 14.6805 55.9289 15.0711C56.3195 15.4616 56.9526 15.4616 57.3431 15.0711L63.7071 8.70711ZM0 9H63V7H0V9Z' fill='%2327201C'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 2rem;
+        width: 6.4rem;
+        height: 1.6rem;
+        top: 50%;
+        transform: translate(0, -50%);
+        color: #27201c;
+      }
+      &:hover {
+        color: #27201c;
+      }
+    }
+    li,
+    a {
+      font-size: 2.4rem;
+      color: #fff;
+      @media (min-width: $large_desktop) {
+        font-size: 3.2rem;
+      }
+    }
+    li {
+      position: relative;
+
+      & > span {
+        &::before {
+          display: block;
+          content: '';
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          position: absolute;
+          right: 2rem;
+          top: 50%;
+          transform: translate(0, -50%);
+          background-color: #3b312b;
+        }
+        &:after {
+          display: block;
+          content: '!';
+          position: absolute;
+          right: 3.2rem;
+          top: 50%;
+          transform: translate(0, -50%);
+          color: #fff;
+          font-size: 2rem;
+        }
+      }
+    }
+    span {
+      text-align: left;
+      display: block;
+      padding: 1rem;
+      @media (min-width: $large_desktop) {
+        padding: 1.6rem;
+      }
+      &:hover {
+        transition: all 0.3s ease;
+        background-color: #f69e29;
+        ~ .hidden-discribe-block {
+          opacity: 1;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
+.hidden-discribe-block {
+  padding: 1rem;
+  opacity: 0;
+  background-color: #3b312b;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  max-width: 28rem;
+  height: auto;
+  font-size: 1.4rem;
+  z-index: -1;
+  color: #fff;
+}
