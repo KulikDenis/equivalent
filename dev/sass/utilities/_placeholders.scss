@@ -513,17 +513,27 @@
     }
   }
   .splide__head-text {
+    //min-height: 10.2rem;
     font-size: 1.7rem;
     color: #ffffff;
     font-weight: 400;
     margin-bottom: 2.6rem;
+    flex-grow: 1;
+    @media (min-width: $media_tablet) {
+     // min-height: 7.6rem;
+      
+    }
   }
   .splide__main-text {
     margin-bottom: 4rem;
-    flex-grow: 1;
+    //flex-grow: 1;
     // text-overflow: ellipsis;
-    // max-height: 10rem;
+   min-height: 7.2rem;
     // overflow: hidden;
+    overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
     font-size: 1.4rem;
     @media (min-width: $media_tablet) {
       font-size: 1.7rem;
@@ -577,6 +587,7 @@
     right: -5rem;
   }
 }
+
 .grid-2-4-3-6 {
   display: flex;
   @media (min-width: $media_desktop) {
