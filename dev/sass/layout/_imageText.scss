@@ -59,7 +59,7 @@
     color: #f69e29;
   }
   .imageText-wrapper {
-    max-width: 1680px;
+    max-width: 1920px;
     margin: 0 auto;
   }
   .imageText-column {
@@ -99,23 +99,7 @@
     color: #f69e29;
   }
 }
-.bullList {
-  margin: 0 0 2rem 0;
-  padding-left: 2rem;
-  font-size: 1.4rem;
-  font-weight: 300;
-  list-style-type: disc;
-  line-height: 1.5;
-  @media (min-width: $large_desktop) {
-    font-size: 1.7rem;
-  }
-}
-.bullList__item {
-  margin-bottom: 1rem;
-  &::marker {
-    color: #f69e29;
-  }
-}
+
 .impExp {
   padding: 4rem 0 3rem;
   @media (min-width: $media_tablet) {

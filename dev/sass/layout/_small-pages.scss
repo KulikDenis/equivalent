@@ -44,6 +44,9 @@
   @media (min-width: $media_desktop) {
     background-color: #ededed;
   }
+  .bullList{
+    color: #000;
+  }
 }
 .navigate-pages {
   margin-bottom: 2.4rem;
@@ -327,10 +330,26 @@
   }
   &-title {
     letter-spacing: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
     color: #000;
     font-weight: normal;
+  }
+  h2.blog-post__article-title {
+    margin-bottom: 2.5rem;
+    line-height: 1.2;
+    font-size: 2.5rem;
+    @media (min-width: $large_desktop) {
+      font-size: 4rem;
+      margin-bottom: 4rem;
+    }
+  }
+  h3.blog-post__article-title {
+    margin-bottom: 1.7rem;
+    line-height: 1.2;
+    font-size: 1.7rem;
+    @media (min-width: $large_desktop) {
+      margin-bottom: 2.5rem;
+      font-size: 2.5rem;
+    }
   }
   &-nav {
     margin: 2rem 0;
@@ -354,9 +373,12 @@
   }
   &-text {
     font-size: 1.4rem;
-    line-height: 2;
+    line-height: 1.5;
     color: #000;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
+    @media (min-width: $large_desktop) {
+      font-size: 1.7rem;
+    }
   }
 }
 .news-post {
