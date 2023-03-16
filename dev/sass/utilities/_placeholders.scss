@@ -533,14 +533,13 @@
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 4;
-    /* autoprefixer: off */
-    -webkit-box-orient: vertical;
-    /* autoprefixer: on */
     text-overflow: ellipsis;
     font-size: 1.4rem;
     @media (min-width: $media_tablet) {
       font-size: 1.7rem;
     }
+    /* autoprefixer: ignore next */
+      -webkit-box-orient: vertical;
   }
   .splide__link {
     color: #f69e29;
