@@ -37,7 +37,7 @@ gulp.task('sass', () =>
         includePaths: ['./sass']
       }).on('error', sass.logError)
     )
-    .pipe(autoprefixer())
+    .pipe(autoprefixer({remove: false}))
     .pipe(gulpif(argv.prod, cssnano(), sourcemaps.write('../maps')))
     .pipe(gulp.dest('build/css'))
     .on('end', browserSync.reload)
