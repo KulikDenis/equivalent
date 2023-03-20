@@ -4369,6 +4369,7 @@ header .wrapper {
   position: relative;
 }
 .card-img-container span {
+  pointer-events: none;
   position: absolute;
   background-color: #f69e29;
   color: #161210;
@@ -4790,7 +4791,6 @@ header .wrapper {
 .splide__list {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   margin: 0 !important;
@@ -4802,13 +4802,9 @@ header .wrapper {
 }
 
 .splide__pagination {
-  -ms-flex-align: center;
   align-items: center;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -ms-flex-pack: center;
   justify-content: center;
   margin: 0;
   pointer-events: none;
@@ -4843,7 +4839,6 @@ header .wrapper {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   box-sizing: border-box;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
   list-style-type: none !important;
   margin: 0;
@@ -4907,7 +4902,6 @@ header .wrapper {
 .splide__track--draggable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -ms-user-select: none;
   -moz-user-select: none;
        user-select: none;
 }
@@ -4932,16 +4926,13 @@ header .wrapper {
 }
 
 .splide__arrow {
-  -ms-flex-align: center;
   align-items: center;
   background: #ccc;
   border: 0;
   border-radius: 50%;
   cursor: pointer;
-  display: -ms-flexbox;
   display: flex;
   height: 2em;
-  -ms-flex-pack: center;
   justify-content: center;
   opacity: 0.7;
   padding: 0;
@@ -5135,9 +5126,7 @@ header .wrapper {
 
 .splide__pagination--ttb {
   bottom: 0;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
   flex-direction: column;
   left: auto;
   padding: 1em 0;
