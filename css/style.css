@@ -20,7 +20,7 @@
 
 .wrapper {
   max-width: 1360px;
-  padding: 0 1rem;
+  padding: 0 1.6rem;
   min-width: 320px;
   box-sizing: border-box;
 }
@@ -33,7 +33,7 @@
 .middle-wrapper {
   position: relative;
   max-width: 1440px;
-  padding: 0 1rem;
+  padding: 0 1.6rem;
   box-sizing: border-box;
 }
 
@@ -1140,7 +1140,7 @@ header .header-wrapper._fixed {
 }
 @media (max-width: 767px) {
   header .header-wrapper._fixed .menu_body {
-    padding: 7rem 1rem 3rem;
+    padding: 7rem 0 3rem;
   }
   header .header-wrapper._fixed .menu_body::before {
     height: 7rem;
@@ -1359,7 +1359,7 @@ header .wrapper {
     height: 100%;
     background-color: #1d1815;
     transition: top 0.4s ease;
-    padding: 7rem 1rem 3rem;
+    padding: 7rem 0 3rem;
     overflow: auto;
   }
   .menu_body._bg:before {
@@ -1427,11 +1427,13 @@ header .wrapper {
   justify-content: flex-start;
   position: relative;
   border-bottom: 1px solid #2f2824;
+  padding: 0 1.6rem;
 }
 @media (min-width: 768px) {
   .menu_list > li {
     border-bottom: none;
     margin-right: 1.5rem;
+    padding: 0;
   }
 }
 .menu_list > li a {
@@ -1538,6 +1540,7 @@ header .wrapper {
 
 .mobile-menu-info {
   display: block;
+  padding: 0 1.6rem;
 }
 @media (min-width: 768px) {
   .mobile-menu-info {
@@ -1681,6 +1684,11 @@ header .wrapper {
 .main-banner.flex-banner .banner-content {
   padding-bottom: 0;
 }
+@media (min-width: 768px) {
+  .main-banner.flex-banner .banner-content {
+    padding-bottom: 8rem;
+  }
+}
 .main-banner.flex-banner .bg-img {
   height: calc(100% - 5rem);
 }
@@ -1705,7 +1713,7 @@ header .wrapper {
 }
 .main-banner .title__banner {
   display: inline-block;
-  padding: 8rem 0 3rem;
+  padding: 11rem 0 3rem;
 }
 @media (min-width: 768px) {
   .main-banner .title__banner {
@@ -1725,7 +1733,7 @@ header .wrapper {
 .main-banner .title__banner.tiny-title {
   padding: 0 2rem 0 0;
   max-width: 100rem;
-  margin: 8rem 0 0;
+  margin: 10rem 0 4.5rem;
 }
 @media (min-width: 768px) {
   .main-banner .title__banner.tiny-title {
@@ -1740,6 +1748,14 @@ header .wrapper {
 @media (min-width: 1200px) {
   .main-banner .title__banner.tiny-title {
     margin: 17rem 2rem 0 0;
+  }
+}
+.main-banner h1 {
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 768px) {
+  .main-banner h1 {
+    margin-bottom: 4rem;
   }
 }
 .main-banner p {
@@ -1969,7 +1985,7 @@ header .wrapper {
   padding: 0.8rem 1.8rem;
   position: relative;
   z-index: 0;
-  margin: 0 1rem;
+  margin: 0 1.6rem;
 }
 .banner-benefits.benefits-white {
   background-color: #fff;
