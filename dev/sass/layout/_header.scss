@@ -35,7 +35,7 @@ header {
       background-color: #27201c;
       @media (max-width: 767px) {
         .menu_body {
-          padding: 7rem 1rem 3rem;
+          padding: 7rem 0 3rem;
         }
         .menu_body::before {
           height: 7rem;
@@ -235,7 +235,7 @@ header {
     height: 100%;
     background-color: #1d1815;
     transition: top 0.4s ease;
-    padding: 7rem 1rem 3rem;
+    padding: 7rem 0 3rem;
     overflow: auto;
     &._bg {
       &:before {
@@ -295,9 +295,11 @@ header {
     justify-content: flex-start;
     position: relative;
     border-bottom: 1px solid #2f2824;
+    padding: 0 1.6rem;
     @media (min-width: $media_tablet) {
       border-bottom: none;
       margin-right: 1.5rem;
+      padding: 0;
     }
     a {
       display: block;
@@ -400,6 +402,7 @@ header {
 }
 .mobile-menu-info {
   display: block;
+  padding: 0 1.6rem;
   @media (min-width: $media_tablet) {
     display: none;
   }
