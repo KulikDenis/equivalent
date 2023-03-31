@@ -984,6 +984,8 @@ body {
 
 main {
   background-color: #fff;
+  position: relative;
+  z-index: 0;
 }
 
 a {
@@ -2399,11 +2401,15 @@ header .wrapper {
 }
 
 .pageService .logistic .splide__head-text {
+  display: flex;
+  min-height: 4.2rem;
   font-size: 1.4rem;
+  align-items: center;
 }
 @media (min-width: 1200px) {
   .pageService .logistic .splide__head-text {
     font-size: 2.4rem;
+    min-height: 7.2rem;
   }
 }
 
@@ -4379,6 +4385,7 @@ header .wrapper {
   bottom: 1.5rem;
   font-size: 1.2rem;
   font-weight: 500;
+  z-index: 2;
 }
 .card-img-container .card-img__link {
   position: absolute;
@@ -4709,6 +4716,17 @@ header .wrapper {
 .shipping-post .card__link:hover::before {
   left: 0%;
 }
+.service-post .card-img-container::after,
+.shipping-post .card-img-container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.22)), linear-gradient(0deg, rgba(50, 50, 50, 0.15), rgba(50, 50, 50, 0.15));
+  z-index: 1;
+}
 .service-post .img-decor,
 .shipping-post .img-decor {
   position: absolute;
@@ -4716,6 +4734,7 @@ header .wrapper {
   height: 6rem;
   left: 3rem;
   bottom: -3rem;
+  z-index: 3;
 }
 
 .shipping-post .card-wrapper {
