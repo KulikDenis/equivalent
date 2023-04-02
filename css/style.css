@@ -2129,7 +2129,7 @@ header .wrapper {
 }
 
 .delivery {
-  padding: 3rem 0;
+  padding: 4rem 0;
   position: relative;
 }
 @media (min-width: 768px) {
@@ -2140,9 +2140,21 @@ header .wrapper {
 }
 .delivery h2 {
   max-width: 75rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .delivery h2 {
+    margin-bottom: 3.5rem;
+  }
 }
 .delivery p {
   max-width: 106rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .delivery p {
+    margin-bottom: 0;
+  }
 }
 @media (min-width: 768px) {
   .delivery .dislaimer-paragraph {
@@ -2160,11 +2172,12 @@ header .wrapper {
 
 .delivery-list {
   background-color: #fff;
-  margin: 9rem auto 4rem;
+  margin: 3rem auto 4rem;
   max-width: 1340px;
 }
 @media (min-width: 768px) {
   .delivery-list {
+    margin: 9rem auto 4rem;
     filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
   }
 }
@@ -2695,7 +2708,7 @@ header .wrapper {
 }
 .footer .footer-item {
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 @media (min-width: 768px) {
   .footer .footer-item {
@@ -2718,6 +2731,7 @@ header .wrapper {
 .footer .footer-item ul li {
   max-width: 100%;
   font-size: 1.7rem;
+  margin-bottom: 0.3rem;
 }
 @media (min-width: 1200px) {
   .footer .footer-item ul li {
@@ -2741,14 +2755,17 @@ header .wrapper {
   }
 }
 .footer .footer-social {
+  padding-top: 2rem;
   padding-bottom: 5rem;
 }
 @media (min-width: 768px) {
   .footer .footer-social {
+    padding-top: 0;
     padding-bottom: 0;
   }
 }
 .footer .footer-social span {
+  color: #fff;
   margin-bottom: 2rem;
 }
 @media (min-width: 1200px) {
@@ -2899,7 +2916,7 @@ header .wrapper {
 }
 @media (min-width: 768px) {
   .benefits {
-    padding: 7rem 0;
+    padding: 7rem 0 8.6rem;
   }
 }
 .benefits h2 {
@@ -2919,8 +2936,15 @@ header .wrapper {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+.benefits__list-item {
+  margin-bottom: 5.4rem;
+}
+.benefits__list-item:last-child {
+  margin-bottom: 0;
+}
 @media (min-width: 768px) {
   .benefits__list-item {
+    margin-bottom: 0;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: minmax(6rem, auto) 1fr;
@@ -2958,11 +2982,10 @@ header .wrapper {
   }
 }
 .benefits__text {
-  margin-bottom: 5rem;
+  margin-bottom: 0;
 }
 @media (min-width: 768px) {
   .benefits__text {
-    margin-bottom: 2rem;
     padding-right: 2rem;
     max-width: 35rem;
   }
@@ -3176,19 +3199,36 @@ header .wrapper {
 }
 
 .stages {
-  padding: 9rem 0 0;
+  padding: 4rem 0 0;
   background: linear-gradient(to top, #27201c 100px, #fff 100px);
+}
+@media (min-width: 768px) {
+  .stages {
+    padding: 9rem 0 0;
+  }
+}
+.stages h2 {
+  margin-bottom: 4rem;
+}
+@media (min-width: 768px) {
+  .stages h2 {
+    margin-bottom: 2.7rem;
+  }
 }
 .stages .wrapper > p {
   max-width: 90rem;
-  margin-bottom: 10rem;
 }
 .stages__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 1340px;
-  margin: 0 auto;
+  margin: 4rem auto 0;
+}
+@media (min-width: 768px) {
+  .stages__list {
+    margin: 10rem auto 0;
+  }
 }
 .stages__list-item {
   counter-increment: section;
@@ -3455,6 +3495,14 @@ header .wrapper {
 }
 @media (min-width: 768px) {
   .dark-form .form-head-columns {
+    margin-bottom: 9rem;
+  }
+}
+.dark-form .form-head-columns .form-column h2 {
+  margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .dark-form .form-head-columns .form-column h2 {
     margin-bottom: 6rem;
   }
 }
@@ -3607,6 +3655,12 @@ header .wrapper {
 .floatImage h3,
 .floatImage h4 {
   color: #f69e29;
+}
+.floatImage p {
+  margin-bottom: 2rem;
+}
+.floatImage p:last-child {
+  margin-bottom: 0;
 }
 .floatImage .imageText-wrapper {
   max-width: 1920px;
@@ -4050,7 +4104,13 @@ header .wrapper {
 .divisions,
 .contacts {
   background-color: #ededed;
-  padding: 2rem 0 13rem;
+  padding: 2rem 0 5rem;
+}
+@media (min-width: 768px) {
+  .divisions,
+  .contacts {
+    padding: 2rem 0 13rem;
+  }
 }
 .divisions h2,
 .contacts h2 {
@@ -5184,14 +5244,15 @@ header .wrapper {
   justify-content: center;
   align-items: center;
   z-index: 2000;
-  padding: 1rem;
+  padding: 5rem 1rem;
+  flex-flow: wrap;
 }
 
 .modal__container {
   background-color: #ededed;
   padding: 5.5rem 2rem 2.5rem 2rem;
   max-width: 750px;
-  max-height: 100vh;
+  max-height: 100%;
   overflow-y: auto;
   box-sizing: border-box;
   position: relative;
