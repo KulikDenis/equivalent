@@ -2,7 +2,7 @@
   background-color: #161210;
   padding: 5rem 0;
   @media (min-width: $media_tablet) {
-    padding: 7rem 0;
+    padding: 7rem 0 8.6rem;
   }
   h2 {
     color: #fff;
@@ -21,13 +21,18 @@
   }
 
   &__list-item {
+    margin-bottom: 5.4rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
     @media (min-width: $media_tablet) {
+      margin-bottom: 0;
       display: grid;
       grid-template-columns: auto;
       grid-template-rows: minmax(6rem, auto) 1fr;
       position: relative;
       &::after {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         width: 1px;
@@ -57,9 +62,10 @@
     }
   }
   &__text {
-    margin-bottom: 5rem;
+    margin-bottom: 0;
+    //margin-bottom: 5rem;
     @media (min-width: $media_tablet) {
-      margin-bottom: 2rem;
+      //margin-bottom: 2rem;
       padding-right: 2rem;
       max-width: 35rem;
     }

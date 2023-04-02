@@ -13,14 +13,16 @@
   justify-content: center;
   align-items: center;
   z-index: 2000;
-  padding: 1rem;
+  padding: 5rem 1rem;
+  flex-flow: wrap;
 }
 
 .modal__container {
   background-color: #ededed;
   padding: 5.5rem 2rem 2.5rem 2rem;
   max-width: 750px;
-  max-height: 100vh;
+  max-height: 100%;
+  //height: 100%;
   overflow-y: auto;
   box-sizing: border-box;
   position: relative;
@@ -123,19 +125,19 @@
   display: block;
 }
 
-.micromodal-slide[aria-hidden='false'] .modal__overlay {
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
   animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
-.micromodal-slide[aria-hidden='false'] .modal__container {
+.micromodal-slide[aria-hidden="false"] .modal__container {
   animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
-.micromodal-slide[aria-hidden='true'] .modal__overlay {
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
   animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
-.micromodal-slide[aria-hidden='true'] .modal__container {
+.micromodal-slide[aria-hidden="true"] .modal__container {
   animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 

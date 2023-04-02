@@ -1,7 +1,10 @@
 .divisions,
 .contacts {
   background-color: #ededed;
-  padding: 2rem 0 13rem;
+  padding: 2rem 0 5rem;
+  @media (min-width: $media_tablet) {
+    padding: 2rem 0 13rem;
+  }
   h2 {
     margin-bottom: 2.5rem;
     @media (min-width: $large_desktop) {

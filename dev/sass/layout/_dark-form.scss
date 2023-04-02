@@ -14,7 +14,15 @@
     justify-content: space-between;
     margin-bottom: 2rem;
     @media (min-width: $media_tablet) {
-      margin-bottom: 6rem;
+      margin-bottom: 9rem;
+    }
+    .form-column {
+      h2 {
+        margin-bottom: 3rem;
+        @media (min-width: $media_tablet) {
+          margin-bottom: 6rem;
+        }
+      }
     }
   }
   .form-column {

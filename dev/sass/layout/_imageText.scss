@@ -58,6 +58,12 @@
   h4 {
     color: #f69e29;
   }
+  p {
+    margin-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
   .imageText-wrapper {
     max-width: 1920px;
     margin: 0 auto;
